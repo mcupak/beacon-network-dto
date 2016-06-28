@@ -38,10 +38,6 @@ public enum ReferenceDto {
 
     private final String ref;
 
-    private ReferenceDto(String ref) {
-        this.ref = ref;
-    }
-
     public static ReferenceDto fromString(String text) {
         if (text != null) {
             for (ReferenceDto b : ReferenceDto.values()) {
@@ -51,6 +47,10 @@ public enum ReferenceDto {
             }
         }
         return null;
+    }
+
+    private ReferenceDto(String ref) {
+        this.ref = ref;
     }
 
     @Override

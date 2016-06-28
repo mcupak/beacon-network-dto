@@ -38,10 +38,6 @@ public enum AlleleDto {
 
     private final String allele;
 
-    private AlleleDto(String allele) {
-        this.allele = allele;
-    }
-
     public static AlleleDto fromString(String text) {
         if (text != null) {
             for (AlleleDto b : AlleleDto.values()) {
@@ -51,6 +47,10 @@ public enum AlleleDto {
             }
         }
         return null;
+    }
+
+    private AlleleDto(String allele) {
+        this.allele = allele;
     }
 
     @Override

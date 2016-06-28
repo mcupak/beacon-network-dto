@@ -41,10 +41,6 @@ public enum ChromosomeDto {
 
     private final String chrom;
 
-    private ChromosomeDto(String chrom) {
-        this.chrom = chrom;
-    }
-
     public static ChromosomeDto fromString(String text) {
         if (text != null) {
             for (ChromosomeDto b : ChromosomeDto.values()) {
@@ -54,6 +50,10 @@ public enum ChromosomeDto {
             }
         }
         return null;
+    }
+
+    private ChromosomeDto(String chrom) {
+        this.chrom = chrom;
     }
 
     @Override
